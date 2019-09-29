@@ -1,6 +1,3 @@
-
-
-###################################################################
 def consolidate_cart(cart) # consolidate_cart - method (return organize cart with counts)
   cart_consolidated = {}
   cart.each{|item|
@@ -49,5 +46,3 @@ final_cart.each{|item, key|
 return (cart_total*0.9).round(2) if cart_total > 100
 cart_total
 end
-
-###################################################################
