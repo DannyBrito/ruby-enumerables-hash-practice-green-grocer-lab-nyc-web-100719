@@ -20,7 +20,11 @@ def apply_coupons(cart, coupons_a) ## cart & coupons to be apply
     #if cart[coupon_name][:count] == 0
     #  cart.delete(coupon_name)
     #end # need fix
+    if cart["#{coupon_name} W/COUPON"]
+    cart["#{coupon_name} W/COUPON"][:count] += coupon[:num]
+    else  
     cart["#{coupon_name} W/COUPON"] ={ price: ((coupon[:cost]/coupon[:num]).round(2)), clearance: (cart[coupon_name][:clearance]), count: coupon[:num]}
+    end
   end
   }
   cart
